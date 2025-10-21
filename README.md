@@ -1,10 +1,12 @@
 BALNet: Deep Learning-Based Detection and Measurement of Broad Absorption Lines in Quasar Spectra
 
 1) Model Overview
-This repository provides the implementation of BALNet, a deep learning framework designed to detect and measure Broad Absorption Line (BAL) troughs in quasar spectra. BALNet integrates a one-dimensional convolutional neural network (1D-CNN) with bidirectional long short-term memory (Bi-LSTM) networks to achieve high accuracy and efficiency in identifying BAL quasars and characterizing their absorption features.
+   
+    This repository provides the implementation of BALNet, a deep learning framework designed to detect and measure Broad Absorption Line (BAL) troughs in quasar spectra. BALNet integrates a one-dimensional convolutional neural network (1D-CNN) with bidirectional long short-term memory (Bi-LSTM) networks to achieve high accuracy and efficiency in identifying BAL quasars and characterizing their absorption features.
 
-2) Data Preparation
-Before executing the code, please prepare the data as follows:
+3) Data Preparation
+   
+    Before executing the code, please prepare the data as follows:
 
     i) Download the training and testing data：
 * Link: https://drive.google.com/drive/folders/1-tKdAEW17ybIda3YyMjlY_fJsZi264PN?usp=sharing
@@ -19,14 +21,16 @@ Before executing the code, please prepare the data as follows:
 * Scripts: Use mkh5_BAL.py and dr16q_mkh5_BAL.py to convert the files from steps (i) and (ii) into HDF5 format for direct model input.
 * Output: The conversion generates BAL_spec.h5 (from the simulated data) and dr16Q_BAL_spec.h5 (from the SDSS data). These HDF5 files are also provided in the link from step (i) for direct download.
 
-3) Model Training 
-To train the model, run the following command:
+3) Model Training
+
+    To train the model, run the following command:
 python BALNet.py
 * Configuration: The model is trained using the Adam optimizer (learning rate = 0.0001) with a batch size of 256.
 * Hardware: Training runs for 200 epochs on an NVIDIA RTX 3090 GPU.
 * Output: The trained model is saved as BAL_iden_200.h5 in the current directory.
 
 4) Application
-The trained BALNet model can be applied to large-scale quasar spectral datasets to identify BAL quasars and measure their troughs. When applied to the SDSS DR16Q dataset, BALNet detected BAL troughs in 20.4% of the spectra, which includes 8.8% redshifted systems and many newly identified sources. The full prediction catalog is available in DR16Q_pred.zip.
+   
+    The trained BALNet model can be applied to large-scale quasar spectral datasets to identify BAL quasars and measure their troughs. When applied to the SDSS DR16Q dataset, BALNet detected BAL troughs in 20.4% of the spectra, which includes 8.8% redshifted systems and many newly identified sources. The full prediction catalog is available in DR16Q_pred.zip.
 To run the prediction on new data, use:
 python BALNet_pred.py
