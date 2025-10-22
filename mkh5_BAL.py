@@ -21,11 +21,11 @@ def write_hdf5(arr,outfile,arr_name = "spectra"):
     with h5py.File(outfile,"a") as f:
         f.create_dataset(arr_name,data=arr,dtype=arr.dtype)
 
-n_Lam = 1136 #
+n_Lam = 1165 #
 #channels =1    #
-n_l=377    #label
+n_l=387    #label
 
-N_sample = 250000
+N_sample = 200000
 
 spectra = np.empty((N_sample,n_Lam),dtype = np.float32)
 labels  = np.empty((N_sample,n_l),dtype = np.int32)  #
