@@ -18,7 +18,7 @@ BALNet: Deep Learning-Based Detection and Measurement of Broad Absorption Lines 
     * Description: We have pre-processed the spectra (within a redshift range of 1.5 to 5.7 and a rest-frame wavelength range of 1300–1700 Å) into a single file named Flux_DR16Q.fits. This file is also available at the link provided in step (i).
 
     iii) Convert to HDF5 Format:
-    * Scripts: Use mkh5_BAL.py and dr16q_mkh5_BAL.py to convert the files from steps (i) and (ii) into HDF5 format for direct model input.
+    * Scripts: Use mkh5_BAL_train_test.py and mkh5_dr16Q_BAL_pred.py to convert the files from steps (i) and (ii) into HDF5 format for direct model input.
     * Output: The conversion generates BAL_spec.h5 (from the simulated data) and dr16Q_BAL_spec.h5 (from the SDSS data). These HDF5 files are also provided in the link from step (i) for direct download.
 
 3) Model Training
