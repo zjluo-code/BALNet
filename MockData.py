@@ -201,7 +201,7 @@ if __name__ == '__main__':
     RSNR = readfits(Dpath + 'SNR_BALQSO.fits')
     
 	#### The subset spectra from DR16Q with redshift range of 1.5 to 5.7
-    Flux_DR16 = readfits(Dpath+'Flux_DR16.fits')  
+    Flux_DR16 = readfits(Dpath+'Flux_DR16Q.fits')  
     
 	#### The corresponding information for the Flux_DR16.fits
     Index_DR16 = readfits(Dpath+'Index_DR16.fits')
